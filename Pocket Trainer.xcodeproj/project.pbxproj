@@ -3,16 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10F145DCB515910AD5C8D84E /* Pods_Pocket_Trainer_Pocket_TrainerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67430839690973155ECB4964 /* Pods_Pocket_Trainer_Pocket_TrainerUITests.framework */; };
+		1F09DDD06EE8495E45E5C513 /* Pods_Pocket_TrainerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9E937F875689B986525F27 /* Pods_Pocket_TrainerTests.framework */; };
+		30BEB0DCC74D9EA233CA29DD /* Pods_Pocket_Trainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2129B74E52925CEA3B3896 /* Pods_Pocket_Trainer.framework */; };
+		619FAFAA26F24B1500D421BA /* WorkoutDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FAFA926F24B1500D421BA /* WorkoutDays.swift */; };
+		619FAFAC26F256F600D421BA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FAFAB26F256F600D421BA /* ImageLoader.swift */; };
+		619FAFAE26F25D3F00D421BA /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FAFAD26F25D3F00D421BA /* WorkoutRow.swift */; };
+		61C12CBE26F3FC0800BD9242 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C12CBD26F3FC0800BD9242 /* Storage.swift */; };
+		61C12CC026F6601E00BD9242 /* ExerciseInCalenderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C12CBF26F6601E00BD9242 /* ExerciseInCalenderRow.swift */; };
 		61CCCDC726EEABB8003B59F2 /* Pocket_TrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDC626EEABB8003B59F2 /* Pocket_TrainerApp.swift */; };
-		61CCCDC926EEABB8003B59F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDC826EEABB8003B59F2 /* ContentView.swift */; };
+		61CCCDC926EEABB8003B59F2 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDC826EEABB8003B59F2 /* DebugView.swift */; };
 		61CCCDCB26EEABBD003B59F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61CCCDCA26EEABBD003B59F2 /* Assets.xcassets */; };
 		61CCCDCE26EEABBD003B59F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61CCCDCD26EEABBD003B59F2 /* Preview Assets.xcassets */; };
 		61CCCDD926EEABBD003B59F2 /* Pocket_TrainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDD826EEABBD003B59F2 /* Pocket_TrainerTests.swift */; };
 		61CCCDE426EEABBD003B59F2 /* Pocket_TrainerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDE326EEABBD003B59F2 /* Pocket_TrainerUITests.swift */; };
+		61CCCDF226EEACA0003B59F2 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDF126EEACA0003B59F2 /* Exercise.swift */; };
+		61CCCDF426EEAD25003B59F2 /* MuscleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDF326EEAD25003B59F2 /* MuscleGroup.swift */; };
+		61CCCDF826EEAF78003B59F2 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDF726EEAF78003B59F2 /* Requester.swift */; };
+		61CCCDFA26EF6E7D003B59F2 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDF926EF6E7D003B59F2 /* Workout.swift */; };
+		61CCCDFC26EF6ED5003B59F2 /* WorkoutDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDFB26EF6ED5003B59F2 /* WorkoutDay.swift */; };
+		61CCCDFE26EF7D14003B59F2 /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDFD26EF7D14003B59F2 /* WorkoutsView.swift */; };
+		61CCCE0026F0FB48003B59F2 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDFF26F0FB48003B59F2 /* ExerciseDetailView.swift */; };
+		61CCCE0226F1363E003B59F2 /* ExerciseMuscleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCE0126F1363E003B59F2 /* ExerciseMuscleRowView.swift */; };
+		61CCCE0526F13B9F003B59F2 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCE0426F13B9F003B59F2 /* MainPage.swift */; };
+		61CCCE0726F13BA7003B59F2 /* MuscleChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCE0626F13BA7003B59F2 /* MuscleChoose.swift */; };
+		61CCCE0926F22CBE003B59F2 /* ExerciseChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCE0826F22CBE003B59F2 /* ExerciseChoose.swift */; };
+		61F14FE826FA8F8300532610 /* WorkoutRowPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F14FE726FA8F8300532610 /* WorkoutRowPlaceholder.swift */; };
+		61F14FEA26FA943300532610 /* AnimatedGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F14FE926FA943300532610 /* AnimatedGradient.swift */; };
+		61F14FEC26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F14FEB26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift */; };
+		61F1C67726F277310017EF74 /* ExerciseInWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1C67626F277310017EF74 /* ExerciseInWorkout.swift */; };
+		61F1C67926F2DF350017EF74 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1C67826F2DF350017EF74 /* CalendarView.swift */; };
+		61F1C67F26F31D590017EF74 /* SaveExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1C67E26F31D590017EF74 /* SaveExercise.swift */; };
+		61F1C68126F3212D0017EF74 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1C68026F3212D0017EF74 /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +59,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08DB579895586DE3F4B27E40 /* Pods-Pocket TrainerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket TrainerTests.debug.xcconfig"; path = "Target Support Files/Pods-Pocket TrainerTests/Pods-Pocket TrainerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		09FD55F0495D06BE73643FAC /* Pods-Pocket Trainer-Pocket TrainerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Trainer-Pocket TrainerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Trainer-Pocket TrainerUITests/Pods-Pocket Trainer-Pocket TrainerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D2129B74E52925CEA3B3896 /* Pods_Pocket_Trainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Trainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F5F13428D8CD71262474D6C /* Pods-Pocket Trainer-Pocket TrainerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Trainer-Pocket TrainerUITests.release.xcconfig"; path = "Target Support Files/Pods-Pocket Trainer-Pocket TrainerUITests/Pods-Pocket Trainer-Pocket TrainerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5381A522455325DADE4070F0 /* Pods-Pocket Trainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Trainer.release.xcconfig"; path = "Target Support Files/Pods-Pocket Trainer/Pods-Pocket Trainer.release.xcconfig"; sourceTree = "<group>"; };
+		619FAFA926F24B1500D421BA /* WorkoutDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDays.swift; sourceTree = "<group>"; };
+		619FAFAB26F256F600D421BA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		619FAFAD26F25D3F00D421BA /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
+		61C12CBD26F3FC0800BD9242 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		61C12CBF26F6601E00BD9242 /* ExerciseInCalenderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInCalenderRow.swift; sourceTree = "<group>"; };
 		61CCCDC326EEABB8003B59F2 /* Pocket Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61CCCDC626EEABB8003B59F2 /* Pocket_TrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_TrainerApp.swift; sourceTree = "<group>"; };
-		61CCCDC826EEABB8003B59F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		61CCCDC826EEABB8003B59F2 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		61CCCDCA26EEABBD003B59F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61CCCDCD26EEABBD003B59F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61CCCDCF26EEABBD003B59F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +81,28 @@
 		61CCCDDF26EEABBD003B59F2 /* Pocket TrainerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket TrainerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61CCCDE326EEABBD003B59F2 /* Pocket_TrainerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_TrainerUITests.swift; sourceTree = "<group>"; };
 		61CCCDE526EEABBD003B59F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CCCDF126EEACA0003B59F2 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		61CCCDF326EEAD25003B59F2 /* MuscleGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroup.swift; sourceTree = "<group>"; };
+		61CCCDF726EEAF78003B59F2 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		61CCCDF926EF6E7D003B59F2 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		61CCCDFB26EF6ED5003B59F2 /* WorkoutDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDay.swift; sourceTree = "<group>"; };
+		61CCCDFD26EF7D14003B59F2 /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+		61CCCDFF26F0FB48003B59F2 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		61CCCE0126F1363E003B59F2 /* ExerciseMuscleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseMuscleRowView.swift; sourceTree = "<group>"; };
+		61CCCE0426F13B9F003B59F2 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		61CCCE0626F13BA7003B59F2 /* MuscleChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleChoose.swift; sourceTree = "<group>"; };
+		61CCCE0826F22CBE003B59F2 /* ExerciseChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseChoose.swift; sourceTree = "<group>"; };
+		61F14FE726FA8F8300532610 /* WorkoutRowPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRowPlaceholder.swift; sourceTree = "<group>"; };
+		61F14FE926FA943300532610 /* AnimatedGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGradient.swift; sourceTree = "<group>"; };
+		61F14FEB26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseMuscleRowPlaceholder.swift; sourceTree = "<group>"; };
+		61F1C67626F277310017EF74 /* ExerciseInWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInWorkout.swift; sourceTree = "<group>"; };
+		61F1C67826F2DF350017EF74 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		61F1C67E26F31D590017EF74 /* SaveExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveExercise.swift; sourceTree = "<group>"; };
+		61F1C68026F3212D0017EF74 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		67430839690973155ECB4964 /* Pods_Pocket_Trainer_Pocket_TrainerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Trainer_Pocket_TrainerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FBFA95B593B7001F64EA4C4 /* Pods-Pocket TrainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket TrainerTests.release.xcconfig"; path = "Target Support Files/Pods-Pocket TrainerTests/Pods-Pocket TrainerTests.release.xcconfig"; sourceTree = "<group>"; };
+		8B9E937F875689B986525F27 /* Pods_Pocket_TrainerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_TrainerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DAEBE334D4A7B9E23E0BC3C /* Pods-Pocket Trainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Trainer.debug.xcconfig"; path = "Target Support Files/Pods-Pocket Trainer/Pods-Pocket Trainer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30BEB0DCC74D9EA233CA29DD /* Pods_Pocket_Trainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F09DDD06EE8495E45E5C513 /* Pods_Pocket_TrainerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +126,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F145DCB515910AD5C8D84E /* Pods_Pocket_Trainer_Pocket_TrainerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		619FAFA826F24AEE00D421BA /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				61CCCDFD26EF7D14003B59F2 /* WorkoutsView.swift */,
+				619FAFAD26F25D3F00D421BA /* WorkoutRow.swift */,
+				61F14FE726FA8F8300532610 /* WorkoutRowPlaceholder.swift */,
+				619FAFA926F24B1500D421BA /* WorkoutDays.swift */,
+				61F1C67626F277310017EF74 /* ExerciseInWorkout.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
 		61CCCDBA26EEABB8003B59F2 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +152,8 @@
 				61CCCDD726EEABBD003B59F2 /* Pocket TrainerTests */,
 				61CCCDE226EEABBD003B59F2 /* Pocket TrainerUITests */,
 				61CCCDC426EEABB8003B59F2 /* Products */,
+				7607206DA68DC5E338DA54AD /* Pods */,
+				78CC05230137B2E1B2C94313 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				61CCCDC626EEABB8003B59F2 /* Pocket_TrainerApp.swift */,
-				61CCCDC826EEABB8003B59F2 /* ContentView.swift */,
+				61CCCDF626EEADE2003B59F2 /* Views */,
+				61CCCDF526EEADD7003B59F2 /* Structs */,
+				61F1C67D26F2EC4D0017EF74 /* Libs */,
 				61CCCDCA26EEABBD003B59F2 /* Assets.xcassets */,
 				61CCCDCF26EEABBD003B59F2 /* Info.plist */,
 				61CCCDCC26EEABBD003B59F2 /* Preview Content */,
@@ -130,6 +207,86 @@
 			path = "Pocket TrainerUITests";
 			sourceTree = "<group>";
 		};
+		61CCCDF526EEADD7003B59F2 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				61CCCDF126EEACA0003B59F2 /* Exercise.swift */,
+				61CCCDF326EEAD25003B59F2 /* MuscleGroup.swift */,
+				61CCCDF926EF6E7D003B59F2 /* Workout.swift */,
+				61CCCDFB26EF6ED5003B59F2 /* WorkoutDay.swift */,
+				61F1C67E26F31D590017EF74 /* SaveExercise.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		61CCCDF626EEADE2003B59F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				61CCCE0426F13B9F003B59F2 /* MainPage.swift */,
+				61F1C68226F321310017EF74 /* Calendar */,
+				61CCCE0626F13BA7003B59F2 /* MuscleChoose.swift */,
+				61CCCE0326F1368E003B59F2 /* Exercises */,
+				619FAFA826F24AEE00D421BA /* Workouts */,
+				61CCCDC826EEABB8003B59F2 /* DebugView.swift */,
+				61F14FE926FA943300532610 /* AnimatedGradient.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		61CCCE0326F1368E003B59F2 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				61CCCE0826F22CBE003B59F2 /* ExerciseChoose.swift */,
+				61CCCDFF26F0FB48003B59F2 /* ExerciseDetailView.swift */,
+				61CCCE0126F1363E003B59F2 /* ExerciseMuscleRowView.swift */,
+				61F14FEB26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		61F1C67D26F2EC4D0017EF74 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				61CCCDF726EEAF78003B59F2 /* Requester.swift */,
+				619FAFAB26F256F600D421BA /* ImageLoader.swift */,
+				61C12CBD26F3FC0800BD9242 /* Storage.swift */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		61F1C68226F321310017EF74 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				61F1C68026F3212D0017EF74 /* CalendarViewModel.swift */,
+				61F1C67826F2DF350017EF74 /* CalendarView.swift */,
+				61C12CBF26F6601E00BD9242 /* ExerciseInCalenderRow.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		7607206DA68DC5E338DA54AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DAEBE334D4A7B9E23E0BC3C /* Pods-Pocket Trainer.debug.xcconfig */,
+				5381A522455325DADE4070F0 /* Pods-Pocket Trainer.release.xcconfig */,
+				09FD55F0495D06BE73643FAC /* Pods-Pocket Trainer-Pocket TrainerUITests.debug.xcconfig */,
+				1F5F13428D8CD71262474D6C /* Pods-Pocket Trainer-Pocket TrainerUITests.release.xcconfig */,
+				08DB579895586DE3F4B27E40 /* Pods-Pocket TrainerTests.debug.xcconfig */,
+				7FBFA95B593B7001F64EA4C4 /* Pods-Pocket TrainerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		78CC05230137B2E1B2C94313 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D2129B74E52925CEA3B3896 /* Pods_Pocket_Trainer.framework */,
+				67430839690973155ECB4964 /* Pods_Pocket_Trainer_Pocket_TrainerUITests.framework */,
+				8B9E937F875689B986525F27 /* Pods_Pocket_TrainerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,15 +294,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61CCCDE826EEABBD003B59F2 /* Build configuration list for PBXNativeTarget "Pocket Trainer" */;
 			buildPhases = (
+				4E79304D9279A6F857074AE5 /* [CP] Check Pods Manifest.lock */,
 				61CCCDBF26EEABB8003B59F2 /* Sources */,
 				61CCCDC026EEABB8003B59F2 /* Frameworks */,
 				61CCCDC126EEABB8003B59F2 /* Resources */,
+				580BF9799DAF295067A6A664 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Pocket Trainer";
+			packageProductDependencies = (
+			);
 			productName = "Pocket Trainer";
 			productReference = 61CCCDC326EEABB8003B59F2 /* Pocket Trainer.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +315,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61CCCDEB26EEABBD003B59F2 /* Build configuration list for PBXNativeTarget "Pocket TrainerTests" */;
 			buildPhases = (
+				59685A3D473564F0644F05A5 /* [CP] Check Pods Manifest.lock */,
 				61CCCDD026EEABBD003B59F2 /* Sources */,
 				61CCCDD126EEABBD003B59F2 /* Frameworks */,
 				61CCCDD226EEABBD003B59F2 /* Resources */,
@@ -172,9 +334,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61CCCDEE26EEABBD003B59F2 /* Build configuration list for PBXNativeTarget "Pocket TrainerUITests" */;
 			buildPhases = (
+				4800F91350C02BC17A983FC2 /* [CP] Check Pods Manifest.lock */,
 				61CCCDDB26EEABBD003B59F2 /* Sources */,
 				61CCCDDC26EEABBD003B59F2 /* Frameworks */,
 				61CCCDDD26EEABBD003B59F2 /* Resources */,
+				83E2A75BF4F1BCD936D678B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +381,8 @@
 				Base,
 			);
 			mainGroup = 61CCCDBA26EEABB8003B59F2;
+			packageReferences = (
+			);
 			productRefGroup = 61CCCDC426EEABB8003B59F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -254,13 +420,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4800F91350C02BC17A983FC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pocket Trainer-Pocket TrainerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E79304D9279A6F857074AE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pocket Trainer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		580BF9799DAF295067A6A664 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Trainer/Pods-Pocket Trainer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Trainer/Pods-Pocket Trainer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pocket Trainer/Pods-Pocket Trainer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59685A3D473564F0644F05A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pocket TrainerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83E2A75BF4F1BCD936D678B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Trainer-Pocket TrainerUITests/Pods-Pocket Trainer-Pocket TrainerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pocket Trainer-Pocket TrainerUITests/Pods-Pocket Trainer-Pocket TrainerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pocket Trainer-Pocket TrainerUITests/Pods-Pocket Trainer-Pocket TrainerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		61CCCDBF26EEABB8003B59F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61CCCDC926EEABB8003B59F2 /* ContentView.swift in Sources */,
+				61CCCDFC26EF6ED5003B59F2 /* WorkoutDay.swift in Sources */,
+				61F1C67726F277310017EF74 /* ExerciseInWorkout.swift in Sources */,
+				61CCCE0926F22CBE003B59F2 /* ExerciseChoose.swift in Sources */,
+				619FAFAC26F256F600D421BA /* ImageLoader.swift in Sources */,
+				61F1C68126F3212D0017EF74 /* CalendarViewModel.swift in Sources */,
+				61CCCE0026F0FB48003B59F2 /* ExerciseDetailView.swift in Sources */,
+				61CCCDC926EEABB8003B59F2 /* DebugView.swift in Sources */,
+				61CCCE0726F13BA7003B59F2 /* MuscleChoose.swift in Sources */,
+				61C12CBE26F3FC0800BD9242 /* Storage.swift in Sources */,
+				61F14FE826FA8F8300532610 /* WorkoutRowPlaceholder.swift in Sources */,
+				61C12CC026F6601E00BD9242 /* ExerciseInCalenderRow.swift in Sources */,
+				61CCCE0526F13B9F003B59F2 /* MainPage.swift in Sources */,
+				61F1C67F26F31D590017EF74 /* SaveExercise.swift in Sources */,
 				61CCCDC726EEABB8003B59F2 /* Pocket_TrainerApp.swift in Sources */,
+				61CCCDF426EEAD25003B59F2 /* MuscleGroup.swift in Sources */,
+				61CCCDF826EEAF78003B59F2 /* Requester.swift in Sources */,
+				61CCCDF226EEACA0003B59F2 /* Exercise.swift in Sources */,
+				61F14FEC26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift in Sources */,
+				61CCCE0226F1363E003B59F2 /* ExerciseMuscleRowView.swift in Sources */,
+				61F14FEA26FA943300532610 /* AnimatedGradient.swift in Sources */,
+				61CCCDFE26EF7D14003B59F2 /* WorkoutsView.swift in Sources */,
+				61F1C67926F2DF350017EF74 /* CalendarView.swift in Sources */,
+				619FAFAA26F24B1500D421BA /* WorkoutDays.swift in Sources */,
+				619FAFAE26F25D3F00D421BA /* WorkoutRow.swift in Sources */,
+				61CCCDFA26EF6E7D003B59F2 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +706,7 @@
 		};
 		61CCCDE926EEABBD003B59F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DAEBE334D4A7B9E23E0BC3C /* Pods-Pocket Trainer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,12 +723,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "vladukha.Pocket-Trainer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		61CCCDEA26EEABBD003B59F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5381A522455325DADE4070F0 /* Pods-Pocket Trainer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,12 +746,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "vladukha.Pocket-Trainer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		61CCCDEC26EEABBD003B59F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08DB579895586DE3F4B27E40 /* Pods-Pocket TrainerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +775,7 @@
 		};
 		61CCCDED26EEABBD003B59F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FBFA95B593B7001F64EA4C4 /* Pods-Pocket TrainerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +798,7 @@
 		};
 		61CCCDEF26EEABBD003B59F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09FD55F0495D06BE73643FAC /* Pods-Pocket Trainer-Pocket TrainerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +819,7 @@
 		};
 		61CCCDF026EEABBD003B59F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F5F13428D8CD71262474D6C /* Pods-Pocket Trainer-Pocket TrainerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

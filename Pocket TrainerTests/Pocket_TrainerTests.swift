@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Pocket_Trainer
+
 
 class Pocket_TrainerTests: XCTestCase {
 
