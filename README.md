@@ -18,12 +18,12 @@ API для взаимодействия с базой данных упражн�
 * Календарь с заполняемым списком выполненых упражнений с количеством подходов, повторений и используемого веса
 
 
-![Muscles List](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/muscleList.png)
-![Exercises list](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/exerciseList.png)
-![Exercise Details](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/exercise.png)
-![programm list](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/programm.png)
-![program details](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/programmDetail.png)
-![Calendar](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/calendar.png)
+![Muscles List](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/muscleList.PNG)
+![Exercises list](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/exerciseList.PNG)
+![Exercise Details](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/exercise.PNG)
+![programm list](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/programm.PNG)
+![program details](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/programmDetail.PNG)
+![Calendar](https://github.com/vladukhaDog/Pocket-Trainer-SwiftUI/blob/main/images/calendar.PNG)
 
 
 
