@@ -1,0 +1,50 @@
+//
+//  WorkoutRowPlaceholder.swift
+//  Pocket Trainer
+//
+//  Created by vladukha on 22.09.2021.
+//
+
+import SwiftUI
+let cuc = 100.0
+struct WorkoutRowPlaceholder: View {
+	
+	var body: some View {
+		
+			VStack{
+				HStack{
+					AnimatedGradient()
+						.frame(width: 100, height: 100)
+						.padding()
+					.cornerRadius(15)
+					
+					VStack{
+						AnimatedGradient()
+					}
+					
+					Spacer()
+					Image(systemName:  "chevron.down")
+						.foregroundColor(.blue)
+						.padding(.leading)
+					
+				}
+			}
+			
+		
+		.padding()
+		.overlay(
+			RoundedRectangle(cornerRadius: 16)
+				.stroke(Color.gray, lineWidth: 4.0)
+		)
+		.padding(.leading)
+		.padding(.trailing)
+		.padding(.top)
+		.transition(.opacity)
+	}
+}
+
+struct WorkoutRowPlaceholder_Previews: PreviewProvider {
+    static var previews: some View {
+        WorkoutRowPlaceholder()
+    }
+}

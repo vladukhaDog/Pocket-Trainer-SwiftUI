@@ -14,9 +14,7 @@ struct ExerciseDetailView: View {
 	
 	@Environment(\.colorScheme) var colorScheme
 	
-	var backColor: Color{
-		return colorScheme == .dark ? Color(red: 30/256, green: 32/256, blue: 34/256) : Color.white
-	}
+
 	
 	func FillMuscles(_ muscles: [MuscleGroup]){
 		withAnimation {
@@ -35,7 +33,7 @@ struct ExerciseDetailView: View {
 	
 	var body: some View {
 		ZStack{
-			backColor
+			Color("Background")
 				.ignoresSafeArea()
 		ScrollView{
 			AnimatedImage(url: URL(string: exercise.ImagePath!)!)

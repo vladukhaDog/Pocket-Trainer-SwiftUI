@@ -12,9 +12,7 @@ struct MuscleChoose: View {
 	
 	@Environment(\.colorScheme) var colorScheme
 	
-	var backColor: Color{
-		return colorScheme == .dark ? Color(red: 30/256, green: 32/256, blue: 34/256) : Color.white
-	}
+	
 	
 	func fillMuscles(_ muscles: [MuscleGroup]){
 		MuscleList = muscles
@@ -23,7 +21,7 @@ struct MuscleChoose: View {
 	var body: some View {
 		NavigationView{
 			ZStack{
-				backColor
+				Color("Background")
 					.ignoresSafeArea()
 				ScrollView{
 					if MuscleList.isEmpty{

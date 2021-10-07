@@ -23,9 +23,7 @@ struct CalendarView: View {
 	
 	@Environment(\.colorScheme) var colorScheme
 	
-	var backColor: Color{
-		return colorScheme == .dark ? Color(red: 30/256, green: 32/256, blue: 34/256) : Color.white
-	}
+	
 	
 	
 	@State private var ExerciseList = [Exercise]()
@@ -47,7 +45,7 @@ struct CalendarView: View {
 	var body: some View {
 		NavigationView{
 			ZStack{
-				backColor
+				Color("Background")
 				.ignoresSafeArea()
 				VStack{
 					ZStack{

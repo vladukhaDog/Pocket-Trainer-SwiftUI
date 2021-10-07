@@ -13,9 +13,7 @@ struct ExerciseChoose: View {
 	
 	@Environment(\.colorScheme) var colorScheme
 	
-	var backColor: Color{
-		return colorScheme == .dark ? Color(red: 30/256, green: 32/256, blue: 34/256) : Color.white
-	}
+
 	
 	func fillExercise(_ exercises: [Exercise]){
 		ExerciseList = exercises
@@ -33,7 +31,7 @@ struct ExerciseChoose: View {
 	
 	var body: some View {
 		ZStack{
-		backColor
+			Color("Background")
 				.ignoresSafeArea()
 		ScrollView{
 			if ExerciseForMuscle.isEmpty{

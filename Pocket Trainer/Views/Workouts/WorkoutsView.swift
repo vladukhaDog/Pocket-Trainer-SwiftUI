@@ -12,10 +12,7 @@ struct WorkoutsView: View {
 	
 	@Environment(\.colorScheme) var colorScheme
 	
-	var backColor: Color{
-		return colorScheme == .dark ? Color(red: 30/256, green: 32/256, blue: 34/256) : Color.white
-	}
-	
+
 	func makeData(workout: [Workout]){
 		withAnimation{
 			workouts = workout
@@ -24,7 +21,7 @@ struct WorkoutsView: View {
 	var body: some View {
 		NavigationView(){
 			ZStack{
-				backColor
+				Color("Background")
 					.ignoresSafeArea()
 				ScrollView{
 					if workouts.isEmpty{
