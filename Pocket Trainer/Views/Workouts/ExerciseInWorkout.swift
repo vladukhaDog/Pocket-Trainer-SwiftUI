@@ -11,8 +11,7 @@ struct ExerciseInWorkout: View {
 	@State var data: [ExerciseData]
 	@State var exercises = [Exercise]()
 	
-	@Environment(\.colorScheme) var colorScheme
-
+	
 	
 	func fillExercise(_ exercise: [Exercise]){
 		exercises = exercise

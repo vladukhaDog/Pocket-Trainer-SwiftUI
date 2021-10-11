@@ -10,9 +10,6 @@ import SwiftUI
 struct ExerciseChoose: View {
 	@State var ExerciseList = [Exercise]()
 	@State var Muscle: MuscleGroup
-	
-	@Environment(\.colorScheme) var colorScheme
-	
 
 	
 	func fillExercise(_ exercises: [Exercise]){

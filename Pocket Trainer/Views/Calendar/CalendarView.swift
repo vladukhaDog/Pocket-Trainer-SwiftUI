@@ -20,11 +20,7 @@ struct CalendarView: View {
 	
 	@State var ShowClear = false
 	@State var ShowAlert = false
-	
-	@Environment(\.colorScheme) var colorScheme
-	
-	
-	
+
 	
 	@State private var ExerciseList = [Exercise]()
 	

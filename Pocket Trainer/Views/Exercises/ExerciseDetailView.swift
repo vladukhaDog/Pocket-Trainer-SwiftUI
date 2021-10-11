@@ -12,8 +12,7 @@ struct ExerciseDetailView: View {
 	@State var exercise: Exercise
 	@State var MuscleGroupsList = [MuscleGroup]()
 	
-	@Environment(\.colorScheme) var colorScheme
-	
+
 
 	
 	func FillMuscles(_ muscles: [MuscleGroup]){

@@ -9,17 +9,13 @@ import Foundation
 import SwiftUI
 
 let generator = UINotificationFeedbackGenerator()
-/**
- ошибки выдаваемые базой данных
- */
-enum dbError: Error {
-	case noEntryById(UUID)
-}
+
 
 /**
  вью модель для календаря с упражнениями
  */
 class CalendarViewModel: ObservableObject {
+	let db = DataBase()
 	/**Отображаемые упражнение в этом дне
 	 */
 	@Published var SavedExercises = [SavedExercise]()
@@ -45,13 +41,8 @@ class CalendarViewModel: ObservableObject {
 	 */
 	func load() {
 		withAnimation{
-		if(Storage.fileExists("Exercises.json", in: .caches)){
-		let temp = Storage.retrieve("Exercises.json", from: .caches, as: [SavedExercise].self)
-		self.SavedExercises = temp.filter { Calendar.current.isDate($0.date, inSameDayAs: self.lookingDate)}
-		}else{
-			self.SavedExercises = [SavedExercise]()
-		}
-		}
+			
+			self.SavedExercises = db.getExercisesByDate(lookingDate)		}
 	}
 	
 	/**
@@ -59,12 +50,7 @@ class CalendarViewModel: ObservableObject {
 	 - Parameter recipient:SavedExercise который будет добавлен в базу
 	 */
 	func add(_ exercise: SavedExercise){
-		var temp = [SavedExercise]()
-		if(Storage.fileExists("Exercises.json", in: .caches)){
-		temp = Storage.retrieve("Exercises.json", from: .caches, as: [SavedExercise].self)
-		}
-		temp.append(exercise)
-		Storage.store(temp, to: .caches, as: "Exercises.json")
+		db.addExerciseToDB(exercise)
 		SavedExercises.append(exercise)
 		generator.notificationOccurred(.success)
 	}
@@ -73,18 +59,15 @@ class CalendarViewModel: ObservableObject {
 	 Изменяет существующую запись в базе данных по совпадению .id
 	 - Parameter recipient: измененный SavedExercise
 	 - Throws: `dbError.noEntryById(UUID)`
-				Если в базе не было найдено записи по id
+	 Если в базе не было найдено записи по id
 	 */
 	func edit(exercise: SavedExercise) throws{
-		var temp = Storage.retrieve("Exercises.json", from: .caches, as: [SavedExercise].self)
-		guard let indexInDB = temp.firstIndex(where: {$0.id == exercise.id}) else {
+		do{
+			try db.edit(exercise)
+		}catch{
 			generator.notificationOccurred(.error)
 			throw dbError.noEntryById(exercise.id)
 		}
-		
-		temp[indexInDB] = exercise
-		Storage.store(temp, to: .caches, as: "Exercises.json")
-		
 		guard let indexInArray = SavedExercises.firstIndex(where: {$0.id == exercise.id}) else {
 			generator.notificationOccurred(.error)
 			throw dbError.noEntryById(exercise.id)
@@ -98,30 +81,27 @@ class CalendarViewModel: ObservableObject {
 	 удаляет существующую запись в базе данных по совпадению .id
 	 - Parameter recipient: SavedExercise который нужно удалить, ищет по .id
 	 - Throws: `dbError.noEntryById(UUID)`
-				Если в базе не было найдено записи по id
+	 Если в базе не было найдено записи по id
 	 */
 	func remove(_ exercise: SavedExercise) throws{
-		var temp = Storage.retrieve("Exercises.json", from: .caches, as: [SavedExercise].self)
-		guard let indexInDB = temp.firstIndex(where: {$0.id == exercise.id}) else {
+		
+		do{try db.remove(exercise)}catch{
 			generator.notificationOccurred(.error)
 			throw dbError.noEntryById(exercise.id)
 		}
-		temp.remove(at: indexInDB)
-		
 		guard let indexInArray = SavedExercises.firstIndex(where: {$0.id == exercise.id}) else {
 			generator.notificationOccurred(.error)
 			throw dbError.noEntryById(exercise.id)
 		}
 		SavedExercises.remove(at: indexInArray)
 		
-		Storage.store(temp, to: .caches, as: "Exercises.json")
 		UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 1.0)
 		
 	}
 	
 	func clear()
 	{
-		Storage.clear(.caches)
+		db.clear()
 		generator.notificationOccurred(.success)
 		load()
 	}

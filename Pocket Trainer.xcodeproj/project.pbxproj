@@ -13,6 +13,7 @@
 		619FAFAA26F24B1500D421BA /* WorkoutDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FAFA926F24B1500D421BA /* WorkoutDays.swift */; };
 		619FAFAC26F256F600D421BA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FAFAB26F256F600D421BA /* ImageLoader.swift */; };
 		619FAFAE26F25D3F00D421BA /* WorkoutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FAFAD26F25D3F00D421BA /* WorkoutRow.swift */; };
+		61A5035027144F0D00783240 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A5034F27144F0D00783240 /* DataBase.swift */; };
 		61C12CBE26F3FC0800BD9242 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C12CBD26F3FC0800BD9242 /* Storage.swift */; };
 		61C12CC026F6601E00BD9242 /* ExerciseInCalenderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C12CBF26F6601E00BD9242 /* ExerciseInCalenderRow.swift */; };
 		61CCCDC726EEABB8003B59F2 /* Pocket_TrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCDC626EEABB8003B59F2 /* Pocket_TrainerApp.swift */; };
@@ -67,6 +68,7 @@
 		619FAFA926F24B1500D421BA /* WorkoutDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDays.swift; sourceTree = "<group>"; };
 		619FAFAB26F256F600D421BA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		619FAFAD26F25D3F00D421BA /* WorkoutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRow.swift; sourceTree = "<group>"; };
+		61A5034F27144F0D00783240 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		61C12CBD26F3FC0800BD9242 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		61C12CBF26F6601E00BD9242 /* ExerciseInCalenderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInCalenderRow.swift; sourceTree = "<group>"; };
 		61CCCDC326EEABB8003B59F2 /* Pocket Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +252,7 @@
 				61CCCDF726EEAF78003B59F2 /* Requester.swift */,
 				619FAFAB26F256F600D421BA /* ImageLoader.swift */,
 				61C12CBD26F3FC0800BD9242 /* Storage.swift */,
+				61A5034F27144F0D00783240 /* DataBase.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 			files = (
 				61CCCDFC26EF6ED5003B59F2 /* WorkoutDay.swift in Sources */,
 				61F1C67726F277310017EF74 /* ExerciseInWorkout.swift in Sources */,
+				61A5035027144F0D00783240 /* DataBase.swift in Sources */,
 				61CCCE0926F22CBE003B59F2 /* ExerciseChoose.swift in Sources */,
 				619FAFAC26F256F600D421BA /* ImageLoader.swift in Sources */,
 				61F1C68126F3212D0017EF74 /* CalendarViewModel.swift in Sources */,

@@ -10,9 +10,7 @@ import SwiftUI
 struct MuscleChoose: View {
 	@State var MuscleList = [MuscleGroup]()
 	
-	@Environment(\.colorScheme) var colorScheme
-	
-	
+
 	
 	func fillMuscles(_ muscles: [MuscleGroup]){
 		MuscleList = muscles

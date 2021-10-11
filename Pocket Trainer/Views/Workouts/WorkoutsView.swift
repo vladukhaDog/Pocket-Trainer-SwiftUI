@@ -10,8 +10,6 @@ import SwiftUI
 struct WorkoutsView: View {
 	@State var workouts = [Workout]()
 	
-	@Environment(\.colorScheme) var colorScheme
-	
 
 	func makeData(workout: [Workout]){
 		withAnimation{
