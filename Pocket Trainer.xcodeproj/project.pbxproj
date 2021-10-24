@@ -33,6 +33,7 @@
 		61CCCE0526F13B9F003B59F2 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCE0426F13B9F003B59F2 /* MainPage.swift */; };
 		61CCCE0726F13BA7003B59F2 /* MuscleChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCE0626F13BA7003B59F2 /* MuscleChoose.swift */; };
 		61CCCE0926F22CBE003B59F2 /* ExerciseChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CCCE0826F22CBE003B59F2 /* ExerciseChoose.swift */; };
+		61DA665A2725C74C00C0CC3D /* Pocket_Trainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61DA66582725C74C00C0CC3D /* Pocket_Trainer.xcdatamodeld */; };
 		61F14FE826FA8F8300532610 /* WorkoutRowPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F14FE726FA8F8300532610 /* WorkoutRowPlaceholder.swift */; };
 		61F14FEA26FA943300532610 /* AnimatedGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F14FE926FA943300532610 /* AnimatedGradient.swift */; };
 		61F14FEC26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F14FEB26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift */; };
@@ -94,6 +95,7 @@
 		61CCCE0426F13B9F003B59F2 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		61CCCE0626F13BA7003B59F2 /* MuscleChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleChoose.swift; sourceTree = "<group>"; };
 		61CCCE0826F22CBE003B59F2 /* ExerciseChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseChoose.swift; sourceTree = "<group>"; };
+		61DA66592725C74C00C0CC3D /* Pocket_Trainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pocket_Trainer.xcdatamodel; sourceTree = "<group>"; };
 		61F14FE726FA8F8300532610 /* WorkoutRowPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRowPlaceholder.swift; sourceTree = "<group>"; };
 		61F14FE926FA943300532610 /* AnimatedGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGradient.swift; sourceTree = "<group>"; };
 		61F14FEB26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseMuscleRowPlaceholder.swift; sourceTree = "<group>"; };
@@ -174,9 +176,9 @@
 			children = (
 				61CCCDC626EEABB8003B59F2 /* Pocket_TrainerApp.swift */,
 				61CCCDF626EEADE2003B59F2 /* Views */,
-				61CCCDF526EEADD7003B59F2 /* Structs */,
-				61F1C67D26F2EC4D0017EF74 /* Libs */,
+				61DA665B2725C7B700C0CC3D /* New Group */,
 				61CCCDCA26EEABBD003B59F2 /* Assets.xcassets */,
+				61DA66582725C74C00C0CC3D /* Pocket_Trainer.xcdatamodeld */,
 				61CCCDCF26EEABBD003B59F2 /* Info.plist */,
 				61CCCDCC26EEABBD003B59F2 /* Preview Content */,
 			);
@@ -244,6 +246,15 @@
 				61F14FEB26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift */,
 			);
 			path = Exercises;
+			sourceTree = "<group>";
+		};
+		61DA665B2725C7B700C0CC3D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				61CCCDF526EEADD7003B59F2 /* Structs */,
+				61F1C67D26F2EC4D0017EF74 /* Libs */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		61F1C67D26F2EC4D0017EF74 /* Libs */ = {
@@ -544,6 +555,7 @@
 				61F14FE826FA8F8300532610 /* WorkoutRowPlaceholder.swift in Sources */,
 				61C12CC026F6601E00BD9242 /* ExerciseInCalenderRow.swift in Sources */,
 				61CCCE0526F13B9F003B59F2 /* MainPage.swift in Sources */,
+				61DA665A2725C74C00C0CC3D /* Pocket_Trainer.xcdatamodeld in Sources */,
 				61F1C67F26F31D590017EF74 /* SaveExercise.swift in Sources */,
 				61CCCDC726EEABB8003B59F2 /* Pocket_TrainerApp.swift in Sources */,
 				61CCCDF426EEAD25003B59F2 /* MuscleGroup.swift in Sources */,
@@ -882,6 +894,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		61DA66582725C74C00C0CC3D /* Pocket_Trainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				61DA66592725C74C00C0CC3D /* Pocket_Trainer.xcdatamodel */,
+			);
+			currentVersion = 61DA66592725C74C00C0CC3D /* Pocket_Trainer.xcdatamodel */;
+			path = Pocket_Trainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 61CCCDBB26EEABB8003B59F2 /* Project object */;
 }
