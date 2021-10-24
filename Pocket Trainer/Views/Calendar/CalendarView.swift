@@ -71,7 +71,7 @@ struct CalendarView: View {
 										}
 									}
 									
-									Text("Выбран: \(ExerciseList.first(where: {$0.ExerciseId == ExercId})?.Name ?? "")")
+									//Text("Выбран: \(ExerciseList.first(where: {$0.ExerciseId == ExercId})?.Name ?? "")")
 									Button {
 										withAnimation{
 											ModelView.add(exerciseID: ExercId, date: ModelView.lookingDate, weights: [], repsNumber: [])
@@ -111,6 +111,7 @@ struct CalendarView: View {
 							}
 							.transition(.opacity)
 						}
+						.disabled(ExerciseList.isEmpty)
 						
 						Button {
 							withAnimation{
@@ -122,8 +123,9 @@ struct CalendarView: View {
 								.rotationEffect(.degrees(ShowClear ? 90 : -90))
 								.foregroundColor(.red)
 								.padding()
-						}.hidden()
-						
+						}
+						.hidden()
+						//TODO: сделать удаление рабочим бы надо
 						
 						
 					}
