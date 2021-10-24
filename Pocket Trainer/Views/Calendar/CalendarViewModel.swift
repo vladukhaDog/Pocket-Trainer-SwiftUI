@@ -18,7 +18,7 @@ class CalendarViewModel: ObservableObject {
 	let db = DataBase()
 	/**Отображаемые упражнение в этом дне
 	 */
-	@Published var SavedExercises = [SavedExercise]()
+	@Published var SavedExercises: [SavedExercise] = []
 	
 	/**день, который надо отображать
 	 */
@@ -42,7 +42,15 @@ class CalendarViewModel: ObservableObject {
 	func load() {
 		withAnimation{
 			
-			self.SavedExercises = db.getExercisesByDate(lookingDate)		}
+			let temp = db.getExercisesByDate(lookingDate)
+			if temp.isEmpty{
+				self.SavedExercises.removeAll() // я хер знает, краш, если присваивать пустой массив, хотя в UIKit версии всё нормально
+			}else{
+				self.SavedExercises = temp
+			}
+			
+			
+		}
 	}
 	
 	/**

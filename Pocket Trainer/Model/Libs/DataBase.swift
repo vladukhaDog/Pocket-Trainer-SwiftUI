@@ -204,7 +204,22 @@ class DataBase{
 	 */
 	
 	func clear(){
-		Storage.clear(.documents)
+
+		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedExercise")
+		//fetchRequest.predicate = NSPredicate(format: "")
+		
+		if let exercises = try? viewContext.fetch(fetchRequest) as? [SavedExercise] {
+			
+			for exercise in exercises {
+				viewContext.delete(exercise)
+			}
+			
+			do{
+				try viewContext.save()
+			} catch let error{
+				print("Error in adding an exercise: \(error.localizedDescription)")
+			}
+		}
 	}
 	
 }

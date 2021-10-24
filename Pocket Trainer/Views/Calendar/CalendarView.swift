@@ -122,7 +122,7 @@ struct CalendarView: View {
 								.rotationEffect(.degrees(ShowClear ? 90 : -90))
 								.foregroundColor(.red)
 								.padding()
-						}
+						}.hidden()
 						
 						
 						

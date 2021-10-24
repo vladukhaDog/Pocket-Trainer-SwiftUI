@@ -41,7 +41,6 @@
 		61F14FEC26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F14FEB26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift */; };
 		61F1C67726F277310017EF74 /* ExerciseInWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1C67626F277310017EF74 /* ExerciseInWorkout.swift */; };
 		61F1C67926F2DF350017EF74 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1C67826F2DF350017EF74 /* CalendarView.swift */; };
-		61F1C67F26F31D590017EF74 /* SaveExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1C67E26F31D590017EF74 /* SaveExercise.swift */; };
 		61F1C68126F3212D0017EF74 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1C68026F3212D0017EF74 /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +104,6 @@
 		61F14FEB26FAA0E900532610 /* ExerciseMuscleRowPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseMuscleRowPlaceholder.swift; sourceTree = "<group>"; };
 		61F1C67626F277310017EF74 /* ExerciseInWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInWorkout.swift; sourceTree = "<group>"; };
 		61F1C67826F2DF350017EF74 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		61F1C67E26F31D590017EF74 /* SaveExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveExercise.swift; sourceTree = "<group>"; };
 		61F1C68026F3212D0017EF74 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		67430839690973155ECB4964 /* Pods_Pocket_Trainer_Pocket_TrainerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Trainer_Pocket_TrainerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FBFA95B593B7001F64EA4C4 /* Pods-Pocket TrainerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket TrainerTests.release.xcconfig"; path = "Target Support Files/Pods-Pocket TrainerTests/Pods-Pocket TrainerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 				61CCCDF326EEAD25003B59F2 /* MuscleGroup.swift */,
 				61CCCDF926EF6E7D003B59F2 /* Workout.swift */,
 				61CCCDFB26EF6ED5003B59F2 /* WorkoutDay.swift */,
-				61F1C67E26F31D590017EF74 /* SaveExercise.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -563,7 +560,6 @@
 				61C12CC026F6601E00BD9242 /* ExerciseInCalenderRow.swift in Sources */,
 				61CCCE0526F13B9F003B59F2 /* MainPage.swift in Sources */,
 				61DA665A2725C74C00C0CC3D /* Pocket_Trainer.xcdatamodeld in Sources */,
-				61F1C67F26F31D590017EF74 /* SaveExercise.swift in Sources */,
 				61CCCDC726EEABB8003B59F2 /* Pocket_TrainerApp.swift in Sources */,
 				61CCCDF426EEAD25003B59F2 /* MuscleGroup.swift in Sources */,
 				61CCCDF826EEAF78003B59F2 /* Requester.swift in Sources */,
