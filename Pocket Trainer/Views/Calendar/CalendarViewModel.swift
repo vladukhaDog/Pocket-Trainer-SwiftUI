@@ -49,9 +49,9 @@ class CalendarViewModel: ObservableObject {
 	 Добавляет упражнение в базу
 	 - Parameter recipient:SavedExercise который будет добавлен в базу
 	 */
-	func add(_ exercise: SavedExercise){
-		db.addExerciseToDB(exercise)
-		SavedExercises.append(exercise)
+	func add(exerciseID: Int, date: Date, weights: [Int], repsNumber: [Int]){
+		db.addExerciseToDB(exerciseID: exerciseID, date: date, weights: weights, repsNumber: repsNumber)
+		SavedExercises = db.getExercisesByDate(lookingDate)
 		generator.notificationOccurred(.success)
 	}
 	
@@ -68,11 +68,15 @@ class CalendarViewModel: ObservableObject {
 			generator.notificationOccurred(.error)
 			throw dbError.noEntryById(exercise.id)
 		}
-		guard let indexInArray = SavedExercises.firstIndex(where: {$0.id == exercise.id}) else {
-			generator.notificationOccurred(.error)
-			throw dbError.noEntryById(exercise.id)
-		}
-		SavedExercises[indexInArray] = exercise
+		
+		//guard let indexInArray = SavedExercises.firstIndex(where: {$0.id == exercise.id}) else {
+		//	generator.notificationOccurred(.error)
+		//	throw dbError.noEntryById(exercise.id)
+		//}
+		//SavedExercises[indexInArray] = exercise
+		
+		SavedExercises = db.getExercisesByDate(lookingDate)
+		generator.notificationOccurred(.error)
 		UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 1.0)
 		
 	}
@@ -89,12 +93,13 @@ class CalendarViewModel: ObservableObject {
 			generator.notificationOccurred(.error)
 			throw dbError.noEntryById(exercise.id)
 		}
-		guard let indexInArray = SavedExercises.firstIndex(where: {$0.id == exercise.id}) else {
-			generator.notificationOccurred(.error)
-			throw dbError.noEntryById(exercise.id)
-		}
-		SavedExercises.remove(at: indexInArray)
-		
+		//guard let indexInArray = SavedExercises.firstIndex(where: {$0.id == exercise.id}) else {
+		//	generator.notificationOccurred(.error)
+		//	throw dbError.noEntryById(exercise.id)
+		//}
+		//SavedExercises.remove(at: indexInArray)
+		SavedExercises = db.getExercisesByDate(lookingDate)
+		generator.notificationOccurred(.error)
 		UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 1.0)
 		
 	}

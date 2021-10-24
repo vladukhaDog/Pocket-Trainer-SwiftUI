@@ -11,7 +11,8 @@ struct CalendarView: View {
 	
 	@StateObject var ModelView = CalendarViewModel()
 	@State var ShowAdder = false
-	@State var ExerciseToAdd = SavedExercise(Exercise: ExerciseSavedData(ExerciseID: 1, RepsNumber: [Int]()), date: Date(), Weights: [Int]())
+	@State var ExerciseToAdd = SavedExercise()
+		//Exercise: ExerciseSavedData(ExerciseID: 1, RepsNumber: [Int]()), date: Date(), Weights: [Int]())
 	
 	@State var ExercId: Int = 1
 	@State var SetNumber = "1"
@@ -73,10 +74,7 @@ struct CalendarView: View {
 									Text("Выбран: \(ExerciseList.first(where: {$0.ExerciseId == ExercId})?.Name ?? "")")
 									Button {
 										withAnimation{
-											ModelView.add(SavedExercise(Exercise:
-																			ExerciseSavedData(ExerciseID: ExercId, RepsNumber: [Int]()),
-																		date: ModelView.lookingDate,
-																		Weights: [Int]()))
+											ModelView.add(exerciseID: ExercId, date: ModelView.lookingDate, weights: [], repsNumber: [])
 											
 											ShowAdder.toggle()
 										}

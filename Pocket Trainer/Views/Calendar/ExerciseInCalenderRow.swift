@@ -36,8 +36,8 @@ struct ExerciseInCalenderRows: View {
 	
 	func AddRepToExercise(){
 		let Exerc = SaveExercise
-		Exerc.Weights.append(Int(WeightToAdd) ?? 0)
-		Exerc.Exercise.RepsNumber.append(Int(RepsToAdd) ?? 0)
+		Exerc.weights.append(Int(WeightToAdd) ?? 0)
+		Exerc.repsNumber.append(Int(RepsToAdd) ?? 0)
 		withAnimation{
 			do{
 				try vM.edit(exercise: Exerc)
@@ -54,8 +54,8 @@ struct ExerciseInCalenderRows: View {
 	
 	func RemoveRepFromExercise(){
 		let Exerc = SaveExercise
-		Exerc.Weights.removeLast()//append(Int(WeightToAdd) ?? 0)
-		Exerc.Exercise.RepsNumber.removeLast()//append(Int(RepsToAdd) ?? 0)
+		Exerc.weights.removeLast()//append(Int(WeightToAdd) ?? 0)
+		Exerc.repsNumber.removeLast()//append(Int(RepsToAdd) ?? 0)
 		withAnimation{
 			do{
 				try vM.edit(exercise: Exerc)
@@ -77,7 +77,7 @@ struct ExerciseInCalenderRows: View {
 	
 	var ExerciseToShow: Exercise? {
 		
-		let exerc = ExerciseList.first(where: {$0.ExerciseId == SaveExercise.Exercise.ExerciseID})
+		let exerc = ExerciseList.first(where: {$0.ExerciseId == SaveExercise.exerciseID})
 		return exerc
 	}
 	var body: some View {
@@ -135,16 +135,16 @@ struct ExerciseInCalenderRows: View {
 					
 					
 					LazyVGrid(columns: columns, spacing: 30) {
-						ForEach(0..<EditedExercise.Exercise.SetNumber, id: \.self){ i in
+						ForEach(0..<EditedExercise.repsNumber.count, id: \.self){ i in
 							
 							VStack{
 								HStack{
 									Spacer()
-									Text("\(EditedExercise.Weights[i])")
+									Text("\(EditedExercise.weights[i])")
 									Text("кг")
 									Spacer()
 								}
-								Text("\(SaveExercise.Exercise.RepsNumber[i]) раз")
+								Text("\(SaveExercise.repsNumber[i]) раз")
 							}
 							.transition(.move(edge: .leading).combined(with: .opacity))
 							.overlay(
@@ -152,7 +152,7 @@ struct ExerciseInCalenderRows: View {
 									.stroke(Color.gray, lineWidth: 2.0)
 							)
 						}
-						if EditedExercise.Exercise.SetNumber > 0 {
+						if EditedExercise.repsNumber.count > 0 {
 							Button {
 								withAnimation{
 									RemoveRepFromExercise()
