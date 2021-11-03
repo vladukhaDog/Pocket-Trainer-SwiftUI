@@ -48,7 +48,7 @@ struct ExerciseDetailView: View {
 					ProgressView()
 						.padding()
 						.transition(.opacity)
-						.animation(.easeInOut(duration: 0.5))
+						//.animation(.easeInOut(duration: 0.5))
 				}else{
 				ForEach(musclesForExercise, id: \.MuscleGroupID) {muscle in
 					Text(muscle.Name ?? "cum")
@@ -59,7 +59,7 @@ struct ExerciseDetailView: View {
 								.stroke(Color.gray, lineWidth: 4.0)
 						)
 				}
-				.animation(.easeInOut(duration: 0.5))
+				//.animation(.easeInOut(duration: 0.5))
 				}
 			}
 			Text("Описание")

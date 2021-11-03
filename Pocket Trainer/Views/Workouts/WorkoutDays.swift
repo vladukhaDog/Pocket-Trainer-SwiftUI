@@ -29,23 +29,22 @@ struct WorkoutDays: View {
 	var body: some View {
 		VStack{
 			ForEach(Days, id: \.WorkoutDayID){ work in
-				HStack{
-					NavigationLink(
-						destination:
-							ExerciseInWorkout(data: work.Exercises!) ,
-						label: {
+				NavigationLink(
+					destination:
+						ExerciseInWorkout(data: work.Exercises!) ,
+					label: {
+						HStack{
 							Text(work.Name!)
 								.fixedSize(horizontal: false, vertical: true)
 								.foregroundColor(.primary)
-						})
-					
-					Spacer()
-				}
-				.padding()
-				.overlay(
-					RoundedRectangle(cornerRadius: 16)
-						.stroke(Color.gray, lineWidth: 4.0)
-				)
+							Spacer()
+						}
+						.padding()
+						.overlay(
+							RoundedRectangle(cornerRadius: 16)
+								.stroke(Color.gray, lineWidth: 4.0)
+						)
+					})
 			}
 		}
 		.onAppear {

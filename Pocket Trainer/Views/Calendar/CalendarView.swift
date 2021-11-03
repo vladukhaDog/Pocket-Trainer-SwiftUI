@@ -10,34 +10,18 @@ import SwiftUI
 struct CalendarView: View {
 	
 	@StateObject var ModelView = CalendarViewModel()
-	@State var ShowAdder = false
-	@State var ExerciseToAdd = SavedExercise()
-		//Exercise: ExerciseSavedData(ExerciseID: 1, RepsNumber: [Int]()), date: Date(), Weights: [Int]())
-	
-	@State var ExercId: Int = 1
-	@State var SetNumber = "1"
-	@State var RepNumber = "1"
-	@State var search = ""
-	
-	@State var ShowClear = false
-	@State var ShowAlert = false
+	@State private var ShowExerciseChooseSheet = false
+	@State private var ExerciseToAdd = SavedExercise()
+	@State private var ShowClear = false
+	@State private var ShowAlert = false
 
 	
 	@State private var ExerciseList = [Exercise]()
-	
 	
 	func fillExercise(_ exercises: [Exercise]){
 		ExerciseList = exercises
 		
 	}
-	
-	var FilteredExercises: [Exercise]{
-		ExerciseList.filter { exercise in
-			return (search.isEmpty || exercise.Name.lowercased().contains(search.lowercased()))
-		}
-		
-	}
-	
 	
 	var body: some View {
 		NavigationView{
@@ -48,65 +32,18 @@ struct CalendarView: View {
 					ZStack{
 						DatePicker("Дата", selection: $ModelView.lookingDate, displayedComponents: .date)
 							.datePickerStyle(GraphicalDatePickerStyle())
-							.blur(radius: ShowAdder ? 15 : 0)
-							.disabled(ShowAdder)
-						
-						if ShowAdder{
-							ZStack{
-								RoundedRectangle(cornerRadius: 40)
-									.fill(Color.clear)
-									.overlay(
-										RoundedRectangle(cornerRadius: 40)
-											.stroke(Color.orange, lineWidth: 4.0)
-									)
-								VStack{
-									
-									TextField("Поиск упражнения", text: $search)
-										.padding(.trailing)
-										.padding(.leading)
-										.textFieldStyle(RoundedBorderTextFieldStyle())
-									ScrollView{
-										ForEach(FilteredExercises, id: \.ExerciseId) { exercise in
-											ExerciseButtonRowView(exercise: exercise, chosen: $ExercId)
-										}
-									}
-									
-									//Text("Выбран: \(ExerciseList.first(where: {$0.ExerciseId == ExercId})?.Name ?? "")")
-									Button {
-										withAnimation{
-											ModelView.add(exerciseID: ExercId, date: ModelView.lookingDate, weights: [], repsNumber: [])
-											
-											ShowAdder.toggle()
-										}
-									} label: {
-										Text("Добавить")
-											.bold()
-											.padding(14)
-											.overlay(
-												RoundedRectangle(cornerRadius: 20)
-													.stroke(Color.blue, lineWidth: 4.0)
-											)
-									}
-									
-								}
-								.padding()
-								
-							}
-							.padding()
-							.transition(.move(edge: .top))
-						}
 					}
 					HStack{
 						Text(ModelView.lookingDate, style: .date)
 							.font(.title)
 						Button {
 							withAnimation{
-								ShowAdder.toggle()
+								ShowExerciseChooseSheet.toggle()
 							}
 						} label: {
 							VStack{
-								Image(systemName: ShowAdder ? "arrow.down.forward.and.arrow.up.backward.circle.fill" : "plus.square.fill.on.square.fill")
-								Text(ShowAdder ? "Скрыть" : "Добавить")
+								Image(systemName: "plus.square.fill.on.square.fill")
+								Text("Добавить")
 								
 							}
 							.transition(.opacity)
@@ -170,6 +107,9 @@ struct CalendarView: View {
 					
 					Spacer()
 				}
+				.sheet(isPresented: $ShowExerciseChooseSheet) {
+					ExerciseChooseSheet(ModelView: ModelView, ExerciseList: ExerciseList, showingSheet: $ShowExerciseChooseSheet)
+						}
 				.onAppear(perform: {
 					if ExerciseList.isEmpty{
 						getExercises(complete: fillExercise)
@@ -180,6 +120,48 @@ struct CalendarView: View {
 			}
 		}
 		
+	}
+}
+
+struct ExerciseChooseSheet: View{
+	
+	@State var ModelView: CalendarViewModel
+	@State var ExerciseList: [Exercise]
+	
+	@Binding var showingSheet: Bool
+	
+	@State var search = ""
+	
+	var FilteredExercises: [Exercise]{
+		ExerciseList.filter { exercise in
+			return (search.isEmpty || exercise.Name.lowercased().contains(search.lowercased()))
+		}
+		
+	}
+	
+	var body: some View {
+		ZStack{
+			Color("Background")
+				.ignoresSafeArea()
+			VStack{
+				TextField("Поиск упражнения", text: $search)
+					.padding(.trailing)
+					.padding(.leading)
+					.textFieldStyle(RoundedBorderTextFieldStyle())
+				ScrollView{
+					ForEach(FilteredExercises, id: \.ExerciseId) { exercise in
+						Button {
+							ModelView.add(exerciseID: exercise.ExerciseId, date: ModelView.lookingDate, weights: [], repsNumber: [])
+							showingSheet.toggle()
+						} label: {
+						ExerciseButtonRowView(exercise: exercise)
+						}
+					}
+				}
+			}
+			.padding()
+			
+		}
 	}
 }
 

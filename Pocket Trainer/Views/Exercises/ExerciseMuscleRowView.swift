@@ -46,32 +46,30 @@ struct ExerciseMuscleRowView: View {
 
 struct ExerciseButtonRowView: View {
 	@State var exercise: Exercise
-	@Binding var chosen: Int
 	
 	var body: some View {
 		HStack{
 			AsyncImage(
 				url: URL(string: exercise.ImagePath!)!,
 				placeholder: {
-					ProgressView()
+					AnimatedGradient()
+						.frame(width: 50, height: 50)
 				}
 			)
-			.frame(width: 40, height: 40, alignment: .center)
+			.frame(width: 50, height: 50, alignment: .center)
 			.aspectRatio(contentMode: .fit)
 			.cornerRadius(15)
 			Text(exercise.Name)
+				.foregroundColor(Color.primary)
 			Spacer()
 		}
 		.overlay(
 			RoundedRectangle(cornerRadius: 16)
-				.stroke(chosen == exercise.ExerciseId ? Color.green : Color.gray, lineWidth: 4.0)
+				.stroke(Color.gray, lineWidth: 4.0)
 		)
 		.padding(.leading)
 		.padding(.trailing)
 		.padding(3)
-		.onTapGesture {
-			chosen = exercise.ExerciseId
-		}
 		
 	}
 }

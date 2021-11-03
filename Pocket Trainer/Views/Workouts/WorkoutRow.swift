@@ -46,7 +46,7 @@ struct WorkoutRow: View {
 				if Show{
 					WorkoutDays(workout: workout)
 						.transition(.move(edge: Show ? .top : .bottom).combined(with: .opacity))
-						.animation(.default)
+						
 				}
 			}
 			
