@@ -84,7 +84,7 @@ class CalendarViewModel: ObservableObject {
 		//SavedExercises[indexInArray] = exercise
 		
 		SavedExercises = db.getExercisesByDate(lookingDate)
-		generator.notificationOccurred(.error)
+		
 		UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 1.0)
 		
 	}
@@ -107,7 +107,7 @@ class CalendarViewModel: ObservableObject {
 		//}
 		//SavedExercises.remove(at: indexInArray)
 		SavedExercises = db.getExercisesByDate(lookingDate)
-		generator.notificationOccurred(.error)
+		
 		UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 1.0)
 		
 	}

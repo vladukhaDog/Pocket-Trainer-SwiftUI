@@ -10,12 +10,11 @@ import SwiftUI
 struct ExerciseMuscleRowPlaceholder: View {
     var body: some View {
 		HStack{
-			ProgressView()
-			.frame(width: 40, height: 40, alignment: .center)
-			.cornerRadius(15)
+			AnimatedGradient()
+				.frame(width: 80, height: 80)
 				.padding()
 			AnimatedGradient()
-				.frame(width: 50, height: 50)
+				.frame(width: 100, height: 60)
 			Spacer()
 		}
 		.overlay(

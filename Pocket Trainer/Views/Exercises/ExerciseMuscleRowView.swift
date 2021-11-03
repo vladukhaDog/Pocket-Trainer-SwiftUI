@@ -22,10 +22,10 @@ struct ExerciseMuscleRowView: View {
 				url: URL(string: imageLink)!,
 				placeholder: {
 					AnimatedGradient()
-						.frame(width: 50, height: 50)
+						.frame(width: 80, height: 80)
 				}
 			)
-			.frame(width: 40, height: 40, alignment: .center)
+			.frame(width: 80, height: 80, alignment: .center)
 			.aspectRatio(contentMode: .fit)
 			.cornerRadius(15)
 				.padding()

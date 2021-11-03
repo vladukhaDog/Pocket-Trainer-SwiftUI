@@ -49,7 +49,9 @@ struct ExerciseChoose: View {
 		}
 		.onAppear(perform: {
 			if ExerciseList.isEmpty{
+				
 			getExercises(complete: fillExercise)
+				
 			}
 		})
 		.navigationTitle(Muscle.Name!)

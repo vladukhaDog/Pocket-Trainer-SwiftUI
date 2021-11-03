@@ -101,7 +101,8 @@ struct ExerciseInCalenderRows: View {
 									.font(.title3)
 							})
 							.foregroundColor(.primary)
-						
+							.padding(.leading)
+						Spacer()
 						VStack{
 							HStack{
 								TextField("Повторений", text: $RepsToAdd)

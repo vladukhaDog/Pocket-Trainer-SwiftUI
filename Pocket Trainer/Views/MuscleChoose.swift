@@ -24,7 +24,7 @@ struct MuscleChoose: View {
 				ScrollView{
 					if MuscleList.isEmpty{
 						ForEach(1..<10, id:\.self){ _ in
-							WorkoutRowPlaceholder()
+							ExerciseMuscleRowPlaceholder()
 						}
 						
 					}else {
@@ -42,7 +42,11 @@ struct MuscleChoose: View {
 				}
 				.onAppear(perform: {
 					if MuscleList.isEmpty{
+						DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // Change `2.0` to the desired number of seconds.
+						   // Code you want to be delayed
+						
 						getMuscleGroups(complete: fillMuscles)
+						}
 					}
 				})
 				.navigationTitle("Мышцы")
