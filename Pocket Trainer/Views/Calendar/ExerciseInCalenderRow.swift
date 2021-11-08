@@ -148,10 +148,12 @@ struct ExerciseInCalenderRows: View {
 								Text("\(SaveExercise.repsNumber[i]) раз")
 							}
 							.transition(.move(edge: .leading).combined(with: .opacity))
-							.overlay(
-								RoundedRectangle(cornerRadius: 16)
-									.stroke(Color.gray, lineWidth: 2.0)
-							)
+							.background(Color("Block2"))
+							.cornerRadius(16)
+							//.overlay(
+							//	RoundedRectangle(cornerRadius: 16)
+							//		.stroke(Color.gray, lineWidth: 2.0)
+							//)
 						}
 						if EditedExercise.repsNumber.count > 0 {
 							Button {
@@ -176,10 +178,12 @@ struct ExerciseInCalenderRows: View {
 				}
 				
 			}
-			.overlay(
-				RoundedRectangle(cornerRadius: 16)
-					.stroke(Color.gray, lineWidth: 4.0)
-			)
+			.background(Color("Block"))
+			.cornerRadius(16)
+			//.overlay(
+			//	RoundedRectangle(cornerRadius: 16)
+			//		.stroke(Color.gray, lineWidth: 4.0)
+			//)
 			
 			.onAppear(perform: {
 				if ExerciseList.isEmpty{

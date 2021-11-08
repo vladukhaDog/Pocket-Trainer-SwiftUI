@@ -54,10 +54,12 @@ struct ExerciseDetailView: View {
 					Text(muscle.Name ?? "cum")
 						.padding()
 						.foregroundColor(.gray)
-						.overlay(
-							RoundedRectangle(cornerRadius: 16)
-								.stroke(Color.gray, lineWidth: 4.0)
-						)
+						.background(Color("Block"))
+						.cornerRadius(16)
+						//.overlay(
+						//	RoundedRectangle(cornerRadius: 16)
+						//		.stroke(Color.gray, lineWidth: 4.0)
+						//)
 				}
 				//.animation(.easeInOut(duration: 0.5))
 				}

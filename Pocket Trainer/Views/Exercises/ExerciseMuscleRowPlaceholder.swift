@@ -17,10 +17,12 @@ struct ExerciseMuscleRowPlaceholder: View {
 				.frame(width: 100, height: 60)
 			Spacer()
 		}
-		.overlay(
-			RoundedRectangle(cornerRadius: 16)
-				.stroke(Color.gray, lineWidth: 4.0)
-		)
+		.background(Color("Block"))
+		.cornerRadius(16)
+		//.overlay(
+		//	RoundedRectangle(cornerRadius: 16)
+		//		.stroke(Color.gray, lineWidth: 4.0)
+		//)
 		.padding(.leading)
 		.padding(.trailing)
 		.padding(.top)

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-let cuc = 100.0
+
 struct WorkoutRowPlaceholder: View {
 	
 	var body: some View {
@@ -32,10 +32,12 @@ struct WorkoutRowPlaceholder: View {
 			
 		
 		.padding()
-		.overlay(
-			RoundedRectangle(cornerRadius: 16)
-				.stroke(Color.gray, lineWidth: 4.0)
-		)
+		.background(Color("Block"))
+		.cornerRadius(16)
+		//.overlay(
+		//	RoundedRectangle(cornerRadius: 16)
+		//		.stroke(Color.gray, lineWidth: 4.0)
+		//)
 		.padding(.leading)
 		.padding(.trailing)
 		.padding(.top)

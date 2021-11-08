@@ -228,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				61CCCE0426F13B9F003B59F2 /* MainPage.swift */,
+				61F1C68026F3212D0017EF74 /* CalendarViewModel.swift */,
 				61F1C68226F321310017EF74 /* Calendar */,
 				61CCCE0626F13BA7003B59F2 /* MuscleChoose.swift */,
 				61CCCE0326F1368E003B59F2 /* Exercises */,
@@ -275,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				61F1C67826F2DF350017EF74 /* CalendarView.swift */,
-				61F1C68026F3212D0017EF74 /* CalendarViewModel.swift */,
 				61C12CBF26F6601E00BD9242 /* ExerciseInCalenderRow.swift */,
 			);
 			path = Calendar;

@@ -40,10 +40,12 @@ struct WorkoutDays: View {
 							Spacer()
 						}
 						.padding()
-						.overlay(
-							RoundedRectangle(cornerRadius: 16)
-								.stroke(Color.gray, lineWidth: 4.0)
-						)
+						.background(Color("Block"))
+						.cornerRadius(16)
+						//.overlay(
+						//	RoundedRectangle(cornerRadius: 16)
+						//		.stroke(Color.gray, lineWidth: 4.0)
+						//)
 					})
 			}
 		}

@@ -33,10 +33,12 @@ struct ExerciseMuscleRowView: View {
 				.padding()
 			Spacer()
 		}
-		.overlay(
-			RoundedRectangle(cornerRadius: 16)
-				.stroke(Color.gray, lineWidth: 4.0)
-		)
+		.background(Color("Block"))
+		.cornerRadius(16)
+		//.overlay(
+		//	RoundedRectangle(cornerRadius: 16)
+		//		.stroke(Color.gray, lineWidth: 4.0)
+		//)
 		.padding(.leading)
 		.padding(.trailing)
 		.padding(.top)
@@ -63,10 +65,12 @@ struct ExerciseButtonRowView: View {
 				.foregroundColor(Color.primary)
 			Spacer()
 		}
-		.overlay(
-			RoundedRectangle(cornerRadius: 16)
-				.stroke(Color.gray, lineWidth: 4.0)
-		)
+		.background(Color("Block"))
+		.cornerRadius(16)
+		//.overlay(
+		//	RoundedRectangle(cornerRadius: 16)
+		//		.stroke(Color.gray, lineWidth: 4.0)
+		//)
 		.padding(.leading)
 		.padding(.trailing)
 		.padding(3)
