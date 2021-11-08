@@ -31,9 +31,9 @@ struct ExerciseDetailView: View {
 	}
 	
 	var body: some View {
-		ZStack{
-			Color("Background")
-				.ignoresSafeArea()
+		//ZStack{
+		//	Color("Background")
+		//		.ignoresSafeArea()
 		ScrollView{
 			AnimatedImage(url: URL(string: exercise.ImagePath!)!)
 				.purgeable(true)
@@ -79,7 +79,8 @@ struct ExerciseDetailView: View {
 		})
 		.navigationTitle(exercise.Name)
 		.navigationBarTitleDisplayMode(.inline)
-	}
+		.background(Color("Background"))
+	//}
 	}
 }
 

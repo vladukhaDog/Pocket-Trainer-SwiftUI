@@ -40,7 +40,7 @@ struct WorkoutDays: View {
 							Spacer()
 						}
 						.padding()
-						.background(Color("Block"))
+						.background(Color("Block2"))
 						.cornerRadius(16)
 						//.overlay(
 						//	RoundedRectangle(cornerRadius: 16)

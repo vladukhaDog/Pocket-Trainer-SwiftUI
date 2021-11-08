@@ -27,9 +27,9 @@ struct ExerciseChoose: View {
 	}
 	
 	var body: some View {
-		ZStack{
-			Color("Background")
-				.ignoresSafeArea()
+		//ZStack{
+		//	Color("Background")
+		//		.ignoresSafeArea()
 		ScrollView{
 			if ExerciseForMuscle.isEmpty{
 					ForEach(1..<10, id:\.self){ _ in
@@ -56,7 +56,8 @@ struct ExerciseChoose: View {
 		})
 		.navigationTitle(Muscle.Name!)
 		.navigationBarTitleDisplayMode(.inline)
-		}
+		.background(Color("Background"))
+		//}
 		
 	}
 	

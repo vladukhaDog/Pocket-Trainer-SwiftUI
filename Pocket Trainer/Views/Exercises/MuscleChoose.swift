@@ -18,9 +18,9 @@ struct MuscleChoose: View {
 	}
 	var body: some View {
 		NavigationView{
-			ZStack{
-				Color("Background")
-					.ignoresSafeArea()
+			//ZStack{
+			//	Color("Background")
+			//		.ignoresSafeArea()
 				ScrollView{
 					if MuscleList.isEmpty{
 						ForEach(1..<10, id:\.self){ _ in
@@ -42,16 +42,15 @@ struct MuscleChoose: View {
 				}
 				.onAppear(perform: {
 					if MuscleList.isEmpty{
-						DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // Change `2.0` to the desired number of seconds.
-						   // Code you want to be delayed
 						
 						getMuscleGroups(complete: fillMuscles)
-						}
+						
 					}
 				})
 				.navigationTitle("Мышцы")
+				.background(Color("Background"))
 				
-			}
+			//}
 		}
 		
 		

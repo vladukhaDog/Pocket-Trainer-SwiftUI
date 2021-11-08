@@ -230,7 +230,6 @@
 				61CCCE0426F13B9F003B59F2 /* MainPage.swift */,
 				61F1C68026F3212D0017EF74 /* CalendarViewModel.swift */,
 				61F1C68226F321310017EF74 /* Calendar */,
-				61CCCE0626F13BA7003B59F2 /* MuscleChoose.swift */,
 				61CCCE0326F1368E003B59F2 /* Exercises */,
 				619FAFA826F24AEE00D421BA /* Workouts */,
 				61CCCDC826EEABB8003B59F2 /* DebugView.swift */,
@@ -242,6 +241,7 @@
 		61CCCE0326F1368E003B59F2 /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
+				61CCCE0626F13BA7003B59F2 /* MuscleChoose.swift */,
 				61CCCE0826F22CBE003B59F2 /* ExerciseChoose.swift */,
 				61CCCDFF26F0FB48003B59F2 /* ExerciseDetailView.swift */,
 				61CCCE0126F1363E003B59F2 /* ExerciseMuscleRowView.swift */,

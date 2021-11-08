@@ -20,9 +20,9 @@ struct ExerciseInWorkout: View {
 	
 	
 	var body: some View {
-		ZStack{
-			Color("Background")
-				.ignoresSafeArea()
+		//ZStack{
+		//	Color("Background")
+		//		.ignoresSafeArea()
 		ScrollView{
 			if !exercises.isEmpty {
 				ForEach(data, id: \.ExerciseID){ exer in
@@ -50,7 +50,9 @@ struct ExerciseInWorkout: View {
 				getExercises(complete: fillExercise)
 			}
 		}
-	}
+		
+		.background(Color("Background"))
+	//}
 	}
 }
 

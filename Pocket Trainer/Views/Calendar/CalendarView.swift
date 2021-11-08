@@ -23,15 +23,21 @@ struct CalendarView: View {
 		
 	}
 	
+	init() {
+		getExercises(complete: fillExercise)
+	}
+	
 	var body: some View {
 		NavigationView{
-			ZStack{
-				Color("Background")
-				.ignoresSafeArea()
+			//ZStack{
+			//	Color("Background")
+			//	.ignoresSafeArea()
 				VStack{
 					ZStack{
 						DatePicker("Дата", selection: $ModelView.lookingDate, displayedComponents: .date)
 							.datePickerStyle(GraphicalDatePickerStyle())
+							.background(Color("Block1"))
+							.cornerRadius(16)
 					}
 					HStack{
 						Text(ModelView.lookingDate, style: .date)
@@ -110,14 +116,11 @@ struct CalendarView: View {
 				.sheet(isPresented: $ShowExerciseChooseSheet) {
 					ExerciseChooseSheet(ModelView: ModelView, ExerciseList: ExerciseList, showingSheet: $ShowExerciseChooseSheet)
 						}
-				.onAppear(perform: {
-					if ExerciseList.isEmpty{
-						getExercises(complete: fillExercise)
-					}
-				})
+				
 				.navigationTitle("")
 				.navigationBarHidden(true)
-			}
+				.background(Color("Background"))
+			//}
 		}
 		
 	}
@@ -140,9 +143,9 @@ struct ExerciseChooseSheet: View{
 	}
 	
 	var body: some View {
-		ZStack{
-			Color("Background")
-				.ignoresSafeArea()
+		//ZStack{
+		//	Color("Background")
+		//		.ignoresSafeArea()
 			VStack{
 				TextField("Поиск упражнения", text: $search)
 					.padding(.trailing)
@@ -160,8 +163,9 @@ struct ExerciseChooseSheet: View{
 				}
 			}
 			.padding()
+			.background(Color("Background"))
 			
-		}
+		//}
 	}
 }
 

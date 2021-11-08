@@ -16,11 +16,15 @@ struct WorkoutsView: View {
 			workouts = workout
 		}
 	}
+	
+	init() {
+		getWorkouts(complete: makeData)
+	}
 	var body: some View {
 		NavigationView(){
-			ZStack{
-				Color("Background")
-					.ignoresSafeArea()
+			//ZStack{
+			//	Color("Background")
+			//		.ignoresSafeArea()
 				ScrollView{
 					if workouts.isEmpty{
 						ForEach(1..<10, id:\.self){ _ in
@@ -34,15 +38,13 @@ struct WorkoutsView: View {
 					}
 					
 				}
-				
+				.background(Color("Background"))
+				.navigationTitle("Программы")
 			}
-			.navigationTitle("Программы")
-			.onAppear {
-				if workouts.isEmpty{
-					getWorkouts(complete: makeData)
-				}
-			}
-		}
+			
+		
+			
+		//}
 	}
 	
 }
