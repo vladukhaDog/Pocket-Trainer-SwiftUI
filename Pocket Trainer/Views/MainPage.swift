@@ -8,22 +8,23 @@
 import SwiftUI
 
 struct MainPage: View {
-	
+    
     var body: some View {
-		TabView{
-			CalendarView()
-				.tabItem {
-					Image(systemName: "calendar")
-					Text("Календарь") }
-			MuscleChoose()
-				.tabItem {
-					Image(systemName: "list.dash")
-					Text("Упражнения") }
-			WorkoutsView()
-				.tabItem {
-					Image(systemName: "chart.bar.doc.horizontal")
-					Text("Программы") }
-		}
+        TabView{
+            CalendarView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Календарь") }
+            MuscleChoose()
+                .tabItem {
+                    Image(systemName: "list.dash")
+                    Text("Упражнения") }
+            WorkoutsView()
+                .tabItem {
+                    Image(systemName: "chart.bar.doc.horizontal")
+                    Text("Программы") }
+        }
+        .environmentObject(CalendarViewModel())
     }
 }
 

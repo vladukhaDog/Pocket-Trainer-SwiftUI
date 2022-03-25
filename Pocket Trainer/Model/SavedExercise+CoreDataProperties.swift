@@ -1,6 +1,6 @@
 //
 //  SavedExercise+CoreDataProperties.swift
-//  
+//
 //
 //  Created by vladukha on 24.10.2021.
 //
@@ -21,5 +21,5 @@ extension SavedExercise {
     @NSManaged public var id: UUID
     @NSManaged public var repsNumber: [Int]
     @NSManaged public var weights: [Int]
-
+    @NSManaged public var comment: String
 }
