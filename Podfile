@@ -16,5 +16,6 @@ target 'Pocket Trainer' do
     # Pods for testing
   end
 pod 'Alamofire'
+pod 'SDWebImageSwiftUI'
 
 end

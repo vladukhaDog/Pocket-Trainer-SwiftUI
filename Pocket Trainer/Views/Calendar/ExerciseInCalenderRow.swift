@@ -94,26 +94,19 @@ struct ExerciseInCalenderRows: View {
                                     .purgeable(true)
                                     .resizable()
                                     .indicator(SDWebImageActivityIndicator.medium)
-                                    .frame(width: 100, height: 100)
-                                    .scaledToFit()
                                     .cornerRadius(15)
+                                    .scaledToFit()
+                                    
+                                    .frame(width: 100, height: 100)
+                                    
                                 Text(ExerciseToShow?.Name ?? "")
                                     .font(.title3)
                                     .lineLimit(2)
                             })
                             .foregroundColor(.primary)
-                            .padding(.leading)
+                            .padding(15)
                         Spacer()
                         VStack{
-                            HStack{
-                                TextField("Повторений", text: $RepsToAdd)
-                                    .keyboardType(.numberPad)
-                                    .disableAutocorrection(true)
-                                    .textFieldStyle(.roundedBorder)
-                                    .frame(width: 40)
-                                Image(systemName: "repeat.circle")
-                            }
-                            
                             HStack{
                                 TextField("Вес", text: $WeightToAdd)
                                     .keyboardType(.numberPad)
@@ -122,7 +115,14 @@ struct ExerciseInCalenderRows: View {
                                     .frame(width: 40)
                                 Image(systemName: "scalemass.fill")
                             }
-                            
+                            HStack{
+                                TextField("Повторений", text: $RepsToAdd)
+                                    .keyboardType(.numberPad)
+                                    .disableAutocorrection(true)
+                                    .textFieldStyle(.roundedBorder)
+                                    .frame(width: 40)
+                                Image(systemName: "repeat.circle")
+                            }
                         }
                         Button {
                             AddRepToExercise()
@@ -170,15 +170,15 @@ struct ExerciseInCalenderRows: View {
                         }
                     }
                     .padding()
-                    
+                    Text("\(EditedExercise.comment)")
+                        .font(.footnote)
                     
                 }else
                 {
                     AnimatedGradient()
                         .transition(.opacity)
                 }
-                Text("\(EditedExercise.comment)")
-                    .font(.footnote)
+                
             }
             .background(Color("Block"))
             .cornerRadius(16)

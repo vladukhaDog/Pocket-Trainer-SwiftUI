@@ -13,8 +13,10 @@ struct ExerciseMuscleRowPlaceholder: View {
 			AnimatedGradient()
 				.frame(width: 80, height: 80)
 				.padding()
+                .cornerRadius(10)
 			AnimatedGradient()
 				.frame(width: 100, height: 60)
+                .cornerRadius(10)
 			Spacer()
 		}
 		.background(Color("Block"))

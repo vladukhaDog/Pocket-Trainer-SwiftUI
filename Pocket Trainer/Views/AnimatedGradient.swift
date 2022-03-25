@@ -25,7 +25,7 @@ struct AnimatedGradient: View{
 	var body: some View {
 		ZStack{
 			
-		RoundedRectangle(cornerRadius: 20)
+		RoundedRectangle(cornerRadius: 0)
 				.fill(LinearGradient(gradient: Gradient(colors: self.gradient), startPoint: startPoint, endPoint: endPoint))
 				.onReceive(UpdateDataTimer, perform: { _ in
 					if toggler{

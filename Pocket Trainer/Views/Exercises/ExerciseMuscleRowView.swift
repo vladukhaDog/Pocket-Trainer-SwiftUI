@@ -23,6 +23,7 @@ struct ExerciseMuscleRowView: View {
 				placeholder: {
 					AnimatedGradient()
 						.frame(width: 80, height: 80)
+                        .cornerRadius(15)
 				}
 			)
 			.frame(width: 80, height: 80, alignment: .center)
@@ -56,6 +57,7 @@ struct ExerciseButtonRowView: View {
 				placeholder: {
 					AnimatedGradient()
 						.frame(width: 50, height: 50)
+                        .cornerRadius(15)
 				}
 			)
 			.frame(width: 50, height: 50, alignment: .center)
