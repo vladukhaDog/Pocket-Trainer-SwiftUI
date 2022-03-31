@@ -5,7 +5,7 @@
 //  Created by vladukha on 13.09.2021.
 //
 
-class WorkoutDay: Codable {
+struct WorkoutDay: Codable {
 	var WorkoutDayID: Int
 	var Name:String?
 	/**
@@ -22,7 +22,7 @@ class WorkoutDay: Codable {
 	}
 }
 
-class ExerciseData: Codable {
+struct ExerciseData: Codable {
 	/**
 	Айди упражнения в тренировочном дне
 	

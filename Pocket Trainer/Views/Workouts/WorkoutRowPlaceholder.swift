@@ -14,12 +14,14 @@ struct WorkoutRowPlaceholder: View {
 			VStack{
 				HStack{
 					AnimatedGradient()
-						.frame(width: 100, height: 100)
+                        .frame(width: 100, height: 100)
+                        .cornerRadius(15)
 						.padding()
 					.cornerRadius(15)
 					
 					VStack{
 						AnimatedGradient()
+                            .cornerRadius(15)
 					}
 					
 					Spacer()

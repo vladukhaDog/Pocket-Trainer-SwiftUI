@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WorkoutsView: View {
 	@State var workouts = [Workout]()
-	
+    @State var workoutss = 0
 
 	func makeData(workout: [Workout]){
 		withAnimation{
@@ -17,9 +17,7 @@ struct WorkoutsView: View {
 		}
 	}
 	
-	init() {
-		getWorkouts(complete: makeData)
-	}
+	
 	var body: some View {
 		NavigationView(){
 			//ZStack{
@@ -31,16 +29,21 @@ struct WorkoutsView: View {
 							WorkoutRowPlaceholder()
 						}
 					}else{
-						ForEach(workouts){ workout in
-							WorkoutRow(workout: workout)
-						}
-						
-					}
-					
-				}
-				.background(Color("Background"))
-				.navigationTitle("Программы")
-			}
+                        ForEach(workouts, id:\.ID){ workout in
+                            WorkoutRow(workout: workout)
+                        }
+                        
+                    }
+                    
+                }
+                .background(Color("Background"))
+                .navigationTitle("Программы")
+                .onAppear {
+                    if workouts.isEmpty{
+                        getWorkouts(complete: makeData)
+                    }
+                }
+        }
 			
 		
 			

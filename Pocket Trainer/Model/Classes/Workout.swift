@@ -5,7 +5,7 @@
 //  Created by vladukha on 13.09.2021.
 //
 
-class Workout: Codable, Identifiable {
+struct Workout: Codable {
 	var ID: Int
 	var Name: String
 	var ImagePath: String?
